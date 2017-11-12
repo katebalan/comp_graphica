@@ -68,7 +68,10 @@ void display(void)
   glPopMatrix();
 
   glutSwapBuffers();
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd1768b4d57d71934b7fba54fb11e39b3ad4bd87
 }
 
 
@@ -142,8 +145,6 @@ void keyboard_func( unsigned char key, int x1, int y1 ) {
   cout << "ly = " << ly << endl;
   cout << "lz = " << lz << endl;
 
-  
-
   if ( key == 'q') {
       glMatrixMode(GL_PROJECTION);
       glLoadIdentity();
@@ -170,7 +171,6 @@ void keyboard_func( unsigned char key, int x1, int y1 ) {
 /* Головний цикл додатка */
 int main(int argc, char *argv[])
 {
-
   glutInit(&argc,argv);
 
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -196,4 +196,3 @@ int main(int argc, char *argv[])
  
   return 0;
 }
- 
