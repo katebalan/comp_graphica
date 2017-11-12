@@ -3,14 +3,6 @@
 #include <cmath>
 #include <stdlib.h>
 
-// #include <GL/glew.h>
-
-// #include <GL/gl.h>
-// #include <GL/glu.h>
-// #include <GL/glext.h>
-
-// const double pi = 3.14159265358979323846;
-
 using namespace std;
 
 double x = 0, y = 0, z = 80;
@@ -57,20 +49,6 @@ void list_of_commands(void)
   glutWireSphere(5, 20, 20);
   glPopMatrix();
 
-  // glPushMatrix();
-  // glTranslate(20, 0, 0);
-  // glEnableClientState(GL_VERTEX_ARRAY);
-  // glVertexPointer(3, GL_DOUBLE, 0, mas);
-
-  // glColor3ub(255, 140, 0);
-  // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-  // glDrawArrays(GL_QUADS, 0, 400);
-
-  // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-  // glColor3ub(255, 0, 0);
-  // glDrawArrays(GL_QUADS, 0, 400);
-  // glPopMatrix();
-
   glEndList();
 }
 
@@ -91,55 +69,6 @@ void display(void)
 
   glutSwapBuffers();
 
-  // glMatrixMode(GL_MODELVIEW);
-  // glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-  // glLoadIdentity();
-  // glColor3ub(153, 51, 255); 
-  // glScalef(.4, .4, .4);
-  // gluLookAt(X, Y, Z, XC, YC, ZC, 0, 1, 0);
-
-  // glTranslatef(-1.0, 1.0, 0);
-  // glutSolidTorus(.1, .3, 6, 6); 
-  // glColor3f(1.0, 1.0, 1.0); 
-  // glutWireTorus(.1, .3, 6, 6);
-  
-  // glTranslatef(0, -1.0, 0);
-  // glutWireTorus(.1, .2, 6, 6);
-
-  // glRotatef(90.0,0.0,1.0,0.0);
-  // glTranslatef(0, -1.0, 0);
-  // glColor3ub(153, 51, 255); 
-  // glutSolidCone(.4, .6, 15, 15); 
-  // glColor3f(1.0, 1.0, 1.0); 
-  // glutWireCone(.4, .6, 15, 15); 
-  // glutWireCone(.5, .7, 15, 15);
-   
-  // glRotatef(-90.0,0.0,1.0,0.0);
-  // glTranslatef(1.2, 2.0, 0);
-  // glColor3ub(153, 51, 255); 
-  // glutSolidSphere(0.2, 6, 6); 
-  // glColor3ub(255, 255, 255); 
-  // glutWireSphere(0.2, 6, 6);
-  
-  // glTranslatef(0, -1.0, 0);
-  // glColor3f(0.9, 0.3, 0.2); 
-  // glutSolidSphere(0.5, 20, 20); 
-  // glColor3f(1.0, 1.0, 1.0); 
-  // glutWireSphere(0.5, 20, 20);
-
-  // glTranslatef(0, -1.0, 0);
-  // glColor3ub(255, 255, 255); 
-  // glutWireSphere(0.3, 18, 18);
-
-  // glTranslatef(1.0, 1.0, 0);
-  // glColor3ub(153, 51, 255); 
-  // glutSolidCube(.3); 
-  // glColor3f(1.0, 1.0, 1.0); 
-  // glutWireCube(.3);
-  
-  // glTranslatef(0, -.7, 0); 
-  // glutWireCube(.3); 
-  // glutSwapBuffers(); 
 }
 
 
@@ -195,10 +124,6 @@ void keyboard_func( unsigned char key, int x1, int y1 ) {
 #define ESCAPE '\033'
   switch (key) {
      case ESCAPE:  exit(0);
-  //   case 'd': fi--; break;
-  //   case 'a': fi++; break;
-  //   case 'w': if(teta < 90) teta++; break;
-  //   case 's': if(teta > -90) teta--; break;
   }
 
   if ( key == 'm') {
