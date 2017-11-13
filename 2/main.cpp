@@ -214,7 +214,17 @@ void idf(void) {
 
 // Function. that are used with some period
 void timf() {
+    camera_angle += camera_angle_speed;
+    x_camera = 20 * cos(camera_angle);
+    y_camera = 20 * sin(camera_angle);
 
+    set_camera_and_light();
+    glutPostRedisplay();
+
+    if(stop_animation) {
+      return;
+    }
+    glutTimerFunc(20, timf, 0);
 }
 
 // This function are read current value of matrix
