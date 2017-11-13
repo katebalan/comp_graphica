@@ -188,33 +188,58 @@ void display(void) {
   glutSwapBuffers();
 }
 
+// Function for setting camera and light. Can be used after 
+// changeing some parametrs, for example when 
+// coordinates of light was changed
 void set_camera_and_light(void) {
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    gluLookAt(x_camera, y_camera, z_camera, 0, 0, 0, 0, 1, 0);
 
+    positionLight = [x_light, y_light, z_light, 1.0];
+    glLightfv(GL_LIGHT0, GL_POSITION, positionLight);
 }
 
+// Function that are used 
+// when nothing happend
+// the keys are not using and so on
 void idf(void) {
+    light_angle += light_angle_speed;
+    x_light = 20 * cos(light_angle);
+    y_light = 20 * sin(light_angle);
 
+    set_camera_and_light();
+    glutPostRedisplay();
 }
 
+// Function. that are used with some period
 void timf() {
 
 }
 
+// This function are read current value of matrix
 void read_matrix(void) {
 
 }
 
+// Function for transfer
 void my_translate(int x, int y, int z) {
 
 }
 
-void my_rotate(double angle) {
+// Function for changing scale
+void my_scale(int x, int y, int z) {
 
 }
 
-/* Головний цикл додатка */
-int main(int argc, char *argv[])
-{
+// Function to rotate
+void my_rotate(double angle) {
+  double mas1 = [[cos(angle), sin(angle), 0, 0], [-sin(angle), cos(angle), 0, 0],
+            [0, 0, 1, 0], [0, 0, 0, 1]];
+}
+
+// Main loop of application
+int main(int argc, char *argv[]) {
   init();
   
   glClearColor(0, 0, 0, 1);
