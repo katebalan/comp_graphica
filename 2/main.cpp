@@ -246,6 +246,8 @@ void my_scale(int x, int y, int z) {
 void my_rotate(double angle) {
   double mas1 = [[cos(angle), sin(angle), 0, 0], [-sin(angle), cos(angle), 0, 0],
             [0, 0, 1, 0], [0, 0, 0, 1]];
+  read_matrix();
+  matrix_model = 
 }
 
 // Main loop of application
