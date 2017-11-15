@@ -120,7 +120,7 @@ void setFiguresList(const int listIndex)
 		glPushMatrix(); 
 		//умнож текущей матрицы на матрицу перевода (координаты вектора перевода)
 		glTranslatef(0, 4, 0); 
-		glColor3f(0.545, 0.27, 0.07); // 139 69 19
+		glColor3f(0.345, 0.27, 0.06); // 139 69 19
 		//Включается управление свойствами материала(для робот glColor3f)
 		glEnable(GL_COLOR_MATERIAL); 
 		//Свойства задаются для лицевой стороны поверхности. Одновременное 
@@ -128,7 +128,7 @@ void setFiguresList(const int listIndex)
 		// Значение по умолчанию.
 		glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE); 
 		glRotated(90, -1.0, 0.0, 0.0);
-		glutWireSphere(1.0, 15, 40);
+		glutWireSphere(1.3, 15, 40);
 		//вытащить со стека положеную туда матрицу
 		glPopMatrix(); 
 
@@ -213,7 +213,7 @@ void setFiguresList(const int listIndex)
 
 void idle()
 {
-	lightAngle -= 0.003;
+	// lightAngle -= 0.003;
 	cameraPos.Fi(cameraPos.Fi() + 0.05 * PI / 180);
 	glutPostRedisplay();
 }
